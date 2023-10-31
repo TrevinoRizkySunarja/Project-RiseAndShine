@@ -1,0 +1,414 @@
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    background-size: cover;
+    background-attachment: fixed;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    font-size: 48px;
+    margin-top: 0;
+}
+
+h2 {
+    font-size: 36px;
+}
+
+h3 {
+    font-size: 28px;
+}
+
+p {
+    line-height: 1.5;
+}
+
+a.button-default {
+    display: block;
+    padding: 10px 25px;
+    color: #ffffff;
+    text-decoration: none;
+    text-align: center;
+    border-radius: 5px;
+    border: 3px solid black;
+    background-color: #8800f7;
+    position: relative;
+}
+
+a.button-default:hover {
+    background-color: #FFFFFF;
+    color: #c05252;
+}
+
+#center-container {
+    width: calc(min(1000px, 100vw) - 2em);
+    margin: 0 auto;
+}
+
+nav {
+    display: flex;
+    gap: 10px;   
+    position: sticky;
+    top: 1px;
+    background-color: #8800f7;
+    border: 3px solid black;
+    border-radius: 10px;
+}
+
+nav a {
+    padding: 10px 20px;
+    text-align: center;
+
+    color: #000000;
+    text-decoration: none;
+    border-bottom: 3px solid transparent;
+}
+
+nav a:hover {
+    color: #ffffff;
+    border-bottom: 3px solid #ffffff;
+
+}
+
+header {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    padding: 20px 50px;
+    border-radius: 5px;
+    border: 3px solid black;
+    background-color: #8800f7;
+    margin-top: 18px;
+    margin-bottom: 50px;
+}
+
+header .left-column {
+    flex: 2;
+
+}
+
+header .right-column {
+    flex: 1;
+    text-align: right;
+}
+
+header .steelseries-left {
+    flex: 2;
+}
+
+header .steelseries-right {
+    flex: 1;
+    align-items: right;
+}
+
+.steelseries-right img {
+    height: 180px;
+    width: 180px;
+    margin-left: 30px;
+}
+
+
+header img {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 10%;
+    border: 3px solid black;
+}
+
+header p {
+    margin-bottom: 0;
+}
+
+main {
+    padding: 50px 0;
+    color: #8800f7;
+}
+
+.recipes-container {
+    display: flex;
+    gap: 30px;
+    color:rgb(0, 0, 0);
+    transform-origin:center;
+    transition: all 1s ease;
+
+}
+
+.recipes-container article:hover {
+    box-shadow: 5px 5px 20px rgb(0 0 0 / 0.4);
+    transform:scale(1.09);  
+
+}
+
+.recipes-container article {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    border: 3px solid #000000;
+    border-radius: 1vw;
+    transition: 0.6s;
+    background-color: #8800f7;
+}
+
+.recipes-container article img {
+    width: 100%;
+    border-radius: 1vw;
+}
+
+.recipes-container article h3 {
+    margin-bottom: 0px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+header {
+    height: calc(50vh - 20px);
+    height: 300px;
+}
+
+
+article a {
+    margin-top: auto;
+}
+
+
+@media(orientation: portrait)
+
+{
+    nav {flex-direction: column;}
+    body {flex-direction: column;}
+
+}
+
+@media (max-width: 500px)
+{
+    .recipes-container {flex-direction: column;
+    }
+    .left-column{flex-direction: column;
+    }
+    .right-column{flex-direction: column;
+    }
+}
+
+
+.chat-window a {
+    background-color: #8800f7;
+    border-radius: 50px;
+    padding: 1vh 1vw;
+    position: fixed;
+    right: 2vw;
+    bottom: 4vh;
+    text-decoration: none;
+    color: #000000;
+    z-index: 1;
+}
+
+
+
+
+
+@keyframes showchat {
+    0% {
+        transform: translatey(300px);
+    }
+    100% {
+        transform: translatey(0px);
+    }
+}
+
+
+
+.center-text {
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    height: 70px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.center-text img {
+    margin-top: -20px;
+    max-width: 80px;
+    max-height: 80px;
+    margin-bottom: 10px;
+}
+
+.center-text strong {
+    margin-bottom: -5;
+}
+
+
+
+.productinfo {
+    max-height: 150px;
+    min-height: 150px;
+    max-width: 700px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: auto;
+    margin-top: 20px;
+}
+
+.productinfo img {
+    border-radius: 50px;
+}
+
+.bedrijfinfo img {
+    border-radius: 125px;
+}
+
+.steelseries img {
+ display: flex;
+}
+
+
+
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1vw;
+    background-color: #8800f7;
+    border-top: 2px solid black;
+    border-left: 2px solid black;
+    border-right: 2px solid black;
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 55%;
+    min-height: 8px;
+    text-align: center;
+    border-radius: 8px;
+}
+
+footer a {
+    text-decoration: none;
+    color: #000000;
+    padding: 5px 5px;
+}
+
+
+
+
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 2vw;
+    margin: 5px;
+}
+
+
+button {
+    padding: 2vh;
+    font-size: 1rem;
+    border-radius: 8px;
+    border: 2px solid black;
+    background-color: #8800f7;
+    color: white;
+  }
+  
+  button:hover {
+    background-color: rgb(165, 255, 165);
+    color:rgb(0, 0, 0)
+  }
+  
+  button:active {
+      background-color: rgb(1, 58, 39);
+  }
+
+.form-div {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.next-forms {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.news-form {
+    display: flex;
+    flex-direction: row;
+}
+
+
+
+.form-div label {
+    flex: 1;
+}
+
+.form-div input {
+    flex: 2;
+    border: 1px solid black;
+    border-radius: 8px;
+}
+
+.form-div select {
+    flex: 2;
+}
+
+input {
+    font-size:1rem;
+}
+
+input {
+    padding:2px;
+    font-size:1rem;
+}
+
+select {
+  padding: 6px;
+  font-size: 1rem;
+  border: 0;
+  border: 1px solid black;
+  border-radius: 8px;
+}
+
+form section {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+    gap: 10px;
+}
+
+.contact-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 1.5rem;
+    margin-bottom: 5vh;
+    font-family: 'Poppins', sans-serif;
+    background-color: #8800f7;
+    border-radius: 15px;
+    border: 1px solid #23003f;
+    height: 1050px;
+    width: 800px;
+    margin: auto;
+    margin-bottom: 40px;
+    margin-top: 40px;
+}
+
+.center-div {
+    display: flex;
+    align-items: center;
+}
